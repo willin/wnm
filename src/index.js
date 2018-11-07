@@ -2,6 +2,8 @@ const request = require('NeteaseCloudMusicApi/util/request');
 
 const { join } = require('path');
 const { existsSync, readdirSync } = require('fs');
+// eslint-disable-next-line import/no-extraneous-dependencies
+require('request').debug = false;
 
 // 可用模块分析
 const j = path => join(__dirname, `../${path}/NeteaseCloudMusicApi/module`);
