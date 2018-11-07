@@ -1,0 +1,15 @@
+{
+  "name": "wnm",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:willin/wnm.git",
+  "author": "willin <willin@willin.org>",
+  "license": "MIT",
+  "dependencies": {
+    "NeteaseCloudMusicApi": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-dwing": "^1.2.1"
+  }
+}
