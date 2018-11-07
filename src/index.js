@@ -35,8 +35,8 @@ module.exports = new Proxy({}, {
     // xxx.js 的模块直接返回一个方法
     if (modules.includes(property)) {
       const fn = makeFn(property);
-      // comment 特殊处理
-      if (property === 'comment') {
+      // artists, comment, login 特殊处理
+      if (['artists', 'comment', 'login'].includes(property)) {
         Object.setPrototypeOf(fn, makeProxy(property));
       }
       return fn;

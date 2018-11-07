@@ -1,15 +1,48 @@
 {
   "name": "wnm",
+  "description": "网易云音乐SDK / Netease Cloud Music SDK for node",
   "version": "1.0.0",
+  "scripts": {
+    "test": "nyc ava"
+  },
   "main": "src/index.js",
   "repository": "git@github.com:willin/wnm.git",
   "author": "willin <willin@willin.org>",
-  "license": "MIT",
   "dependencies": {
     "NeteaseCloudMusicApi": "^3.0.2"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "eslint": "^5.8.0",
-    "eslint-config-dwing": "^1.2.1"
-  }
+    "eslint-config-dwing": "^1.2.1",
+    "nyc": "^13.1.0"
+  },
+  "engines": {
+    "node": ">= 8.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!**/_*/*.js",
+      "!**/_*.js"
+    ]
+  },
+  "nyc": {
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "lcov"
+    ],
+    "report-dir": "./.nyc_output",
+    "exclude": [
+      "test",
+      "test{,-*}.js",
+      "**/*.test.js",
+      "**/__tests__/**"
+    ]
+  },
+  "license": "MIT",
+  "keywords": [
+    "网易云音乐","Netease","Cloud Music","SDK","API"
+  ]
 }
