@@ -9,5 +9,5 @@ before_script:
 script:
   - npm test
 after_script:
-  - ./cc-test-reporter format-coverage -t lcov .nyc_output/lcov.info
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter format-coverage -t lcov -o ./nyc_output/codeclimate.json ./nyc_output/frontend/lcov.info  # Format frontend coverage
+  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
