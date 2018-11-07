@@ -1,7 +1,7 @@
 {
   "name": "wnm",
   "description": "网易云音乐SDK / Netease Cloud Music SDK for node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "test": "nyc ava"
   },
@@ -9,7 +9,7 @@
   "repository": "git@github.com:willin/wnm.git",
   "author": "willin <willin@willin.org>",
   "dependencies": {
-    "NeteaseCloudMusicApi": "^3.0.2"
+    "NeteaseCloudMusicApi": "*"
   },
   "devDependencies": {
     "ava": "^0.25.0",
