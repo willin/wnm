@@ -9,5 +9,5 @@ before_script:
 script:
   - npm test
 after_script:
-  - ./cc-test-reporter format-coverage -t lcov ./nyc_output/lcov.info
+  - ./cc-test-reporter format-coverage -t lcov .nyc_output/lcov.info
   - ./cc-test-reporter upload-coverage
