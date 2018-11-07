@@ -131,7 +131,7 @@
     pretty-ms "^0.2.1"
     text-table "^0.2.0"
 
-NeteaseCloudMusicApi@^3.0.2:
+NeteaseCloudMusicApi@*:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/NeteaseCloudMusicApi/-/NeteaseCloudMusicApi-3.0.2.tgz#dd95d237dc50d42ee70f60fa7e61bb2da7260629"
   dependencies:

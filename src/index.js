@@ -32,16 +32,8 @@ const makeProxy = module => new Proxy({}, {
 
 module.exports = new Proxy({}, {
   get: (_, property) => {
-    // xxx.js 的模块直接返回一个方法
-    if (modules.includes(property)) {
-      const fn = makeFn(property);
-      // artists, comment, login 特殊处理
-      if (['artists', 'comment', 'login'].includes(property)) {
-        Object.setPrototypeOf(fn, makeProxy(property));
-      }
-      return fn;
-    }
-    // xxx_xxx.js 的模块返回一个新的 Proxy
-    return makeProxy(property);
+    const fn = makeFn(property);
+    Object.setPrototypeOf(fn, makeProxy(property));
+    return fn;
   }
 });
